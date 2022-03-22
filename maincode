@@ -1,0 +1,14 @@
+import requests
+
+website = "femboyplus.aternos.me"
+
+def url_ok(url):
+    r = requests.head(url)
+    return(r)
+    print(f"diagnostics - {r}")
+    
+try:
+  abc = url_ok(website)
+  print(f"{website} is online")
+except:
+  print(f"{website} is offline")
